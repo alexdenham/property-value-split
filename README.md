@@ -1,4 +1,4 @@
-# House Value Calculator
+# Property Value Split
 
 This project is a simple web application that allows users to calculate how to divide the value of a house on sale based on unequal contributions. Users can input the original value of the house, the sale value, and their respective contributions to the deposit. The application will then compute the fair division of the sale proceeds.
 

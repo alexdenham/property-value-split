@@ -126,11 +126,11 @@ function initializeMortgageInputs() {
         estimateListeners.forEach((id) => {
           document
             .getElementById(id)
-            .removeEventListener("input", calculateFromMonthly);
+            .removeEventListener("input", estimateFromMonthly);
         });
       } else {
         // Show estimate inputs
-        estimateInputs.style.display = "block";
+        calculateInputs.style.display = "block";
         // Set direct inputs to read-only
         document
           .getElementById("totalMortgageInterest")

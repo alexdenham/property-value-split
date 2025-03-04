@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Value Calculator</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>House Value Calculator</h1>
+
+      <div class="house-details">
+        <div class="input-group pound">
+          <label for="originalValue">Original house value:</label>
+          <input type="number" id="originalValue" placeholder="250,000" />
+        </div>
+        <div class="input-group pound">
+          <label for="saleValue">Sale value:</label>
+          <input type="number" id="saleValue" placeholder="300,000" />
+        </div>
+        <div class="input-group pound">
+          <label for="saleFees">Sale fees:</label>
+          <input type="number" id="saleFees" placeholder="2,000" />
+        </div>
+      </div>
+
+      <div class="contributors-container">
+        <!-- Contributor 1 -->
+        <div class="contributor">
+          <h2>Contributor 1</h2>
+          <h3>Direct contributions</h3>
+          <div class="input-group percent">
+            <label for="mortgageSplit1">Mortgage split:</label>
+            <input type="number" id="mortgageSplit1" value="50" />
+          </div>
+          <div class="input-group pound">
+            <label for="deposit1">Initial deposit:</label>
+            <input type="number" id="deposit1" min="0" placeholder="12,500" />
+          </div>
+          <div class="input-group pound">
+            <label for="overpayments1">Mortgage overpayments:</label>
+            <input type="number" id="overpayments1" min="0" placeholder="0" />
+          </div>
+
+          <h3>Indirect contributions</h3>
+          <div class="input-group pound">
+            <label for="solicitor1">Purchase fees and tax:</label>
+            <input type="number" id="purchaseFees1" min="0" placeholder="0" />
+          </div>
+          <div class="input-group pound">
+            <label for="improvements1">Home improvements:</label>
+            <input type="number" id="improvements1" min="0" placeholder="0" />
+          </div>
+        </div>
+
+        <!-- Contributor 2 -->
+        <div class="contributor">
+          <h2>Contributor 2</h2>
+          <h3>Direct contributions</h3>
+          <div class="input-group percent">
+            <label for="mortgageSplit2">Mortgage split:</label>
+            <input type="number" id="mortgageSplit2" value="50" readonly />
+          </div>
+          <div class="input-group pound">
+            <label for="deposit2">Initial deposit:</label>
+            <input type="number" id="deposit2" placeholder="12,500" />
+          </div>
+          <div class="input-group pound">
+            <label for="overpayments2">Mortgage overpayments:</label>
+            <input type="number" id="overpayments2" placeholder="0" />
+          </div>
+
+          <h3>Indirect contributions</h3>
+          <div class="input-group pound">
+            <label for="solicitor2">Purchase fees and tax:</label>
+            <input type="number" id="purchaseFees2" placeholder="0" />
+          </div>
+          <div class="input-group pound">
+            <label for="improvements2">Home improvements:</label>
+            <input type="number" id="improvements2" placeholder="0" />
+          </div>
+        </div>
+      </div>
+      <div class="mortgage-details">
+        <h3>Mortgage payments</h3>
+        <div class="input-method-toggle">
+          <label>
+            <input
+              type="radio"
+              name="mortgageInputMethod"
+              value="calculate"
+              checked
+            />
+            Estimate from monthly payments
+          </label>
+          <label>
+            <input type="radio" name="mortgageInputMethod" value="direct" />
+            Enter total amounts directly
+          </label>
+        </div>
+        <!-- Calculate method -->
+        <div id="calculateInputs">
+          <div class="input-group pound">
+            <label for="monthlyPayment">Monthly payment:</label>
+            <input type="number" id="monthlyPayment" />
+          </div>
+          <div class="input-group percent">
+            <label for="interestRate">Interest rate:</label>
+            <input type="number" id="interestRate" min="0" max="30" value="5" />
+          </div>
+          <div class="input-group">
+            <label for="yearsPayingMortgage">Years paying mortgage:</label>
+            <input type="number" id="yearsPayingMortgage" />
+          </div>
+        </div>
+
+        <!-- Direct input method -->
+        <div id="directInputs">
+          <div class="input-group pound">
+            <label for="totalMortgageEquity">Total equity paid:</label>
+            <input type="number" id="totalMortgageEquity" readonly />
+          </div>
+          <div class="input-group pound">
+            <label for="totalMortgageInterest">Total interest paid:</label>
+            <input type="number" id="totalMortgageInterest" readonly />
+          </div>
+        </div>
+      </div>
+
+      <button id="calculate">Calculate split</button>
+
+      <div id="results" class="results-container">
+        <!-- Results will be inserted here by JavaScript -->
+      </div>
+    </div>
+    <script src="scripts/calculator.js"></script>
+  </body>
+</html>

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  initializeInfoButton("infoButton1");
   initializeCurrencyInputs();
   initializePercentageInputs();
   initializeMortgageInputs();
@@ -8,13 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Functionality to close the info box
   const modal = document.getElementById("infoModal");
-  const infoButton = document.getElementById("infoButton");
   const closeButton = document.querySelector(".close-button");
-
-  infoButton.onclick = function () {
-    modal.style.display = "block";
-  };
 
   closeButton.onclick = function () {
     modal.style.display = "none";
@@ -41,6 +38,14 @@ function parseFormattedNumber(value) {
 
 function readInputBox(id) {
   return parseFormattedNumber(document.getElementById(id).value || 0);
+}
+
+function initializeInfoButton(buttonId) {
+  const infoButton = document.getElementById(buttonId);
+  const modal = document.getElementById("infoModal");
+  infoButton.onclick = function () {
+    modal.style.display = "block";
+  };
 }
 
 function initializeCurrencyInputs() {
@@ -328,7 +333,8 @@ function displayResults(results) {
   resultsDiv.innerHTML = `
         <h3>Results</h3>
         <div class="results-summary">
-            <h3>Equity after sale:</h3>
+          <button id="infoButton2" class="info-button">How it works</button>
+          <h3>Equity after sale:</h3>
             <p>£${displayCurrency(results.saleValue)} <small>(value)</small>
             - £${displayCurrency(
               results.remainingMortgage
@@ -341,4 +347,5 @@ function displayResults(results) {
             ${displayContributorResults(results.contributor2, 2)}
         </div>
     `;
+  initializeInfoButton("infoButton2");
 }

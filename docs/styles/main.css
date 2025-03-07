@@ -25,6 +25,13 @@ small {
   font-family: Arial, sans-serif;
 }
 
+.intro-text {
+  display: block;
+  margin-top: 4px;
+  font-size: 16px;
+  color: #6c757d;
+}
+
 .house-details {
   margin-bottom: 30px;
 }
@@ -382,4 +389,28 @@ button:hover {
   content: "";
   display: table;
   clear: both;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #6c757d;
+  color: #495057;
+}
+
+blockquote b {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #343a40;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+blockquote p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }

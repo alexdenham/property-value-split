@@ -8,6 +8,26 @@ document.addEventListener("DOMContentLoaded", () => {
     .addEventListener("click", calculateSplit);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("infoModal");
+  const infoButton = document.getElementById("infoButton");
+  const closeButton = document.querySelector(".close-button");
+
+  infoButton.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  closeButton.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+});
+
 function formatNumberWithCommas(value) {
   // Remove any non-digit characters except decimal point
   let number = value.replace(/[^\d]/g, "");

@@ -1,292 +1,385 @@
 /* This file contains the CSS styles for the web application. It defines the layout, colors, fonts, and other visual aspects of the webpage. */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
 }
 
 h1 {
-    color: #333;
+  color: #333;
 }
 
 small {
-    color: #696969;
+  color: #696969;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
 }
 
 .house-details {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .contributors-container {
-    display: flex;
-    gap: 50px;
-    margin-bottom: 30px;
+  display: flex;
+  gap: 50px;
+  margin-bottom: 30px;
 }
 
 .contributor {
-    flex: 1;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f8f9fa;
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
 }
 
 .contributor h3 {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e9ecef;
-    color: #495057;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e9ecef;
+  color: #495057;
 }
 
 .input-group {
-    position: relative;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .input-group label {
-    flex: 0 0 200px; /* Fixed width for labels */
-    text-align: left;
-    color: #495057;
-    font-weight: 500;
+  flex: 0 0 200px; /* Fixed width for labels */
+  text-align: left;
+  color: #495057;
+  font-weight: 500;
 }
 
 .input-group input {
-    flex: 1;
-    /* max-width: 200px; Maximum width for inputs */
-    padding: 8px;
-    text-indent: 12px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    font-size: 16px;
-    height: 40px;
-    box-sizing: border-box;
+  flex: 1;
+  /* max-width: 200px; Maximum width for inputs */
+  padding: 8px;
+  text-indent: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 40px;
+  box-sizing: border-box;
 }
 
 .pound::before {
-    content: '£';
-    position: absolute;
-    padding: 12px 10px 10px 12px;
-    color: #a1a1a1;
-    font-size: 16px;
-    line-height: 1.5;
-    pointer-events: none;
-    z-index: 1;
+  content: "£";
+  position: absolute;
+  padding: 12px 10px 10px 12px;
+  color: #a1a1a1;
+  font-size: 16px;
+  line-height: 1.5;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .percent::before {
-    content: '%';
-    position: absolute;
-    padding: 12px 10px 10px 40px;
-    text-indent: 8px;
-    color: #a1a1a1;
-    font-size: 16px;
-    line-height: 1.5;
-    pointer-events: none;
-    z-index: 1;
+  content: "%";
+  position: absolute;
+  padding: 12px 10px 10px 40px;
+  text-indent: 8px;
+  color: #a1a1a1;
+  font-size: 16px;
+  line-height: 1.5;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Add these styles to ensure proper text alignment */
 .input-group input[type="number"] {
-    -moz-appearance: textfield;  /* Remove spinner for Firefox */
+  -moz-appearance: textfield; /* Remove spinner for Firefox */
 }
 
 .input-group input[type="number"]::-webkit-outer-spin-button,
 .input-group input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;    /* Remove spinner for Chrome/Safari */
-    margin: 0;
+  -webkit-appearance: none; /* Remove spinner for Chrome/Safari */
+  margin: 0;
 }
 
 /* Input focus state */
 .input-group input:focus {
-    outline: none;
-    border-color: #80bdff;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 /* Hover state to improve interactivity feedback */
 .input-group input:hover {
-    border-color: #adb5bd;
+  border-color: #adb5bd;
 }
 
 /* Placeholder styling */
 .input-group input::placeholder {
-    color: #adb5bd;
+  color: #adb5bd;
 }
 
-input[type="number"], input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button {
-    display: block;
-    width: 200px;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 .result {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #e2e3e5;
-    border-radius: 4px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e2e3e5;
+  border-radius: 4px;
 }
 
 .results-container {
-    margin-top: 30px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    display: none;
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: none;
 }
 
 .results-summary {
-    padding: 15px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-radius: 8px;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .contributor-results {
-    display: flex;
-    gap: 40px;
-    margin-top: 20px;
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
 }
 
 .contributor-results > div {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-radius: 4px;
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 
 .contributor-results h4 {
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .helper-text {
-    display: block;
-    margin-top: 4px;
-    font-size: 12px;
-    color: #6c757d;
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #6c757d;
 }
 
 /* Style for readonly input */
 .input-group input[readonly] {
-    background-color: #e9ecef;
-    border: 1px solid #ced4da;
-    cursor: not-allowed;
-    color: #6c757d;
-    box-shadow: none;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  cursor: not-allowed;
+  color: #6c757d;
+  box-shadow: none;
 }
 
 /* Remove hover and focus effects for readonly input */
 .input-group input[readonly]:hover,
 .input-group input[readonly]:focus {
-    border-color: #ced4da;
-    box-shadow: none;
+  border-color: #ced4da;
+  box-shadow: none;
 }
 
 .input-method-toggle {
-    margin-bottom: 20px;
-    background-color: #fff;
-    border-radius: 4px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
 .input-method-toggle label {
-    margin-right: 20px;
-    cursor: pointer;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 .input-method-toggle input[type="radio"] {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 /* Adjust currency symbol position for inline layout */
 .input-group::before {
-    left: 210px; /* Adjust based on label width + gap */
+  left: 210px; /* Adjust based on label width + gap */
 }
 
 /* Special handling for split inputs */
 .split-inputs {
-    display: flex;
-    gap: 20px;
-    flex: 1;
+  display: flex;
+  gap: 20px;
+  flex: 1;
 }
 
 .split-inputs .input-group {
-    flex: 1;
+  flex: 1;
 }
 
 .split-inputs .input-group label {
-    flex: 0 0 150px; /* Smaller width for split input labels */
+  flex: 0 0 150px; /* Smaller width for split input labels */
 }
 
 .split-inputs input {
-    text-align: center;
-    text-indent: 0;
-    padding-left: 8px; /* Remove extra padding for percentage inputs */
+  text-align: center;
+  text-indent: 0;
+  padding-left: 8px; /* Remove extra padding for percentage inputs */
 }
 
 /* Adjust readonly styling for inline layout */
 .input-group.readonly-group::after {
-    right: -25px;
-    top: 50%;
+  right: -25px;
+  top: 50%;
 }
 
 /* Add responsive behavior */
 @media (max-width: 768px) {
-    .input-group {
-        flex-direction: column;
-        align-items: stretch;
-    }
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    .input-group label {
-        flex: none;
-        text-align: left;
-        margin-bottom: 5px;
-    }
+  .input-group label {
+    flex: none;
+    text-align: left;
+    margin-bottom: 5px;
+  }
 
-    .input-group input {
-        max-width: none;
-    }
+  .input-group input {
+    max-width: none;
+  }
 
-    .input-group::before {
-        left: 8px;
-    }
+  .input-group::before {
+    left: 8px;
+  }
+}
+
+/* Info Button */
+.info-button {
+  position: relative;
+  float: right;
+  margin: -80px 0 0 0;
+  display: block;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 2px solid #007bff;
+  background: white;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.info-button:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  margin: 40px auto;
+  padding: 40px;
+  width: 80%;
+  max-width: 800px;
+  max-height: calc(100vh - 80px); /* Leave 40px gap top and bottom */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+/* Add smooth scrolling behavior */
+.modal-content {
+  scroll-behavior: smooth;
+}
+
+/* Style the scrollbar for webkit browsers */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Make sure the container has proper clearfix */
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
 }

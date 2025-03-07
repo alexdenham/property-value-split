@@ -10,6 +10,107 @@
     <div class="container">
       <h1>Property Value Split Calculator</h1>
 
+      <button id="infoButton" class="info-button">How this works</button>
+
+      <div id="infoModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>How it works</h2>
+          <p>
+            The calculator categorises contributions into two types: direct
+            contributions and indirect contributions.
+          </p>
+          <p>
+            Direct contributions are anything that directly reduces the size of
+            the mortgage; in other words, increases your ownership of the house.
+            This includes the initial deposit, the equity part of each monthly
+            mortgage payment and any overpayments.
+          </p>
+
+          <p>
+            Indirect contributions are any payments that do not reduce the size
+            of the mortgage but are part of home ownership (such as mortgage
+            interest, purchase/sale fees and taxes). I suggest excluding general
+            costs of living e.g. furniture, utility bills and council tax.
+          </p>
+
+          <p>
+            When calculating the return, we first return the direct
+            contributions as a 1:1 ratio (i.e. you get back exactly what you put
+            in). If the value of the house changes, we divide this difference as
+            a ratio of the total contributions (direct and indirect):
+          </p>
+          <p>
+            direct contributions + (sale value - original value) * proportion of
+            total contributions = return on sale
+          </p>
+
+          <h4>Why consider both direct and indirect contributions?</h4>
+          <i>Divide by direct contributions only</i>
+          <p>
+            A sizable portion of home ownership is paying towards mortgage
+            interest and home maintenance. If the house increases in value, all
+            contributions play a role in making that profit possible. Ignoring
+            indirect contributions means that a sizable deposit or overpayment
+            will result in the smaller contributor not seeing a fair share of
+            the profits.
+          </p>
+          <i>Divide by total contributions only</i>
+          <p>
+            If we only divide equity by the proportion of total contributions,
+            this disadvantages the larger contributor as they are essentially
+            transferring some of their wealth to the other person.
+          </p>
+          <p>
+            For example, two people have contributed equally to the mortgage of
+            a house worth £100,000 but have paid £190,000 in total including
+            interest. If one person makes an overpayment of £10,000 to pay off
+            the remaining mortgage, they would lose £2,500 of that £10,000 to
+            the other person.
+          </p>
+
+          <h4>Unsolicted advice</h4>
+          <i>Discuss expectations before committing</i>
+          <p>
+            Often a taboo subject to discuss the practicalities of a
+            relationship ending, but it is very important before any sizable
+            commitment to discuss what your expectations are if things don't
+            workout. Most couples believe they will remain amicable after a
+            breakup but discussions can quickly deteriorate when it becomes
+            clear expectations of what each is owed do not align.
+          </p>
+          <i>Try to keep indirect payments equal</i>
+          <p>
+            Anything that does not directly contribute to paying off the
+            mortgage can be difficult to quantify the value of. While we account
+            for it slightly here most of these costs are lost, and therefore it
+            is easiest and fairest to equally divide those costs. For example,
+            if you have unequal deposits consider still splitting the solicitor
+            fees equally.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        It can be complicated to work out a fair split when two parties have
+        made unequal contributions to a house. Perhaps one person put their
+        inheritance towards the deposit, one person contributes more to the
+        mortgage to pay back the difference, or one person put their bonus
+        towards a mortgage overpayment. The split is constantly changing as you
+        pay off more of the mortgage and the house value changes.
+      </p>
+      <p>
+        This calculator helps determine how to fairly divide proceeds based on
+        the size of the contributions towards the property.
+      </p>
+      <blockquote>
+        <b>Disclaimer:</b>
+        I am not a lawyer and this tool is not legal advice. There are several
+        factors not considered here (such as unpaid work and forfeited career
+        progress for childcare). If you feel this calculator does not accurately
+        reflect your situation, please seek advice elsewhere.
+      </blockquote>
+
       <div class="house-details">
         <div class="input-group pound">
           <label for="originalValue">Original house value:</label>

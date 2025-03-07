@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   initializeCurrencyInputs();
   initializePercentageInputs();
-  //   initializeMortgageSplit();
   initializeMortgageInputs();
   document
     .getElementById("calculate")
